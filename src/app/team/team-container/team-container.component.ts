@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
+import { Router } from "@angular/router";
 import { Team } from "src/app/models/team";
 import { TeamService } from "../team.service";
 
@@ -11,7 +12,7 @@ import { TeamService } from "../team.service";
 export class TeamContainerComponent implements OnInit {
   teamArray: Array<Team> = new Array();
 
-  constructor(private teamService: TeamService) {}
+  constructor(private teamService: TeamService, private router: Router) {}
 
   ngOnInit() {
     this.getTeams();
@@ -25,5 +26,8 @@ export class TeamContainerComponent implements OnInit {
 
   setResponse(response) {
     this.teamArray = response.response;
+  }
+  teamDetails(teamId) {
+    this.router.navigate(["/team-detail/" + teamId]);
   }
 }

@@ -10,6 +10,7 @@ import { NavComponent } from "./iplNav/nav/nav.component";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { TeamContainerComponent } from "./team/team-container/team-container.component";
+import { TeamDetailsComponent } from './team/team-details/team-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TeamContainerComponent } from "./team/team-container/team-container.com
     LiveScoreComponent,
     LiveScrePanelComponent,
     NavComponent,
-    TeamContainerComponent
+    TeamContainerComponent,
+    TeamDetailsComponent
   ],
   imports: [
     BrowserModule,

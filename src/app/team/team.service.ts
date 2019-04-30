@@ -4,6 +4,7 @@ import { catchError, map, tap } from "rxjs/operators";
 
 import { Injectable } from "@angular/core";
 import { Team } from "../models/team";
+import { TeamDetails } from "../models/teamDetails";
 
 const httpOptions = {
   headers: new HttpHeaders({ "Content-Type": "application/json" })
@@ -20,6 +21,15 @@ export class TeamService {
       tap(_ => this.log("fetched heroes")),
       catchError(this.handleError<Team[]>("getHeroes", []))
     );
+  }
+
+  getTeamsDetails(id): Observable<TeamDetails[]> {
+    return this.http
+      .get<TeamDetails[]>(this.heroesUrl + "team/teamDetailsById?teamId=" + id)
+      .pipe(
+        tap(_ => this.log("fetched heroes")),
+        catchError(this.handleError<TeamDetails[]>("getHeroes", []))
+      );
   }
   private handleError<T>(operation = "operation", result?: T) {
     return (error: any): Observable<T> => {

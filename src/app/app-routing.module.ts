@@ -6,6 +6,7 @@ import { LiveScoreComponent } from "./liveScore/live-score/live-score.component"
 import { LoginComponent } from "./loginContainer/login/login.component";
 import { NgModule } from "@angular/core";
 import { TeamContainerComponent } from "./team/team-container/team-container.component";
+import { TeamDetailsComponent } from "./team/team-details/team-details.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
   {
     path: "teams",
     component: TeamContainerComponent
-  }
+  },
+  { path: "team-detail/:id", component: TeamDetailsComponent }
 ];
 
 @NgModule({
