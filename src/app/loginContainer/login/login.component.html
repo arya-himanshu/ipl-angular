@@ -1,0 +1,18 @@
+<div class="login-container">
+  <div class="form-container">
+    <p style="margin-top: 0px;">Login with valid credential</p>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="input-control">
+        <label>Username:</label>
+        <input type="email" formControlName="username" class="frm-cntrl" />
+      </div>
+      <div class="input-control">
+        <label>Password:</label>
+        <input text="password" formControlName="password" class="frm-cntrl" />
+      </div>
+      <button type="submit" [disabled]="this.loginForm.invalid" class="login-btn">
+        Login
+      </button>
+    </form>
+  </div>
+</div>

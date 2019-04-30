@@ -1,0 +1,35 @@
+.login-container {
+  margin: 50px auto auto auto;
+  width: 350px;
+  height: 225px;
+  background-color: #79a74f;
+  border: 1px solid #42303094;
+  padding: 30px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.frm-cntrl {
+  border-radius: 6px;
+  margin: 5px;
+  padding: 8px;
+  border: 0;
+}
+
+.input-control>label {
+  width: 30px;
+}
+
+.login-btn {
+  float: right;
+  background-color: cadetblue;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+}

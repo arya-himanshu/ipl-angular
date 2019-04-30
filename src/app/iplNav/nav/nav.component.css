@@ -1,0 +1,15 @@
+nav {
+  background-color: #000000c9;
+}
+
+nav ul {
+  display: flex;
+  color: #e9dada;
+  margin: 0;
+  cursor: pointer;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+}

@@ -1,0 +1,14 @@
+.team-comtainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  min-width: 90px;
+  height: 60px;
+  border: 1px solid darkolivegreen;
+  background-color: aliceblue;
+  margin: 10px;
+  padding: 10px;
+}

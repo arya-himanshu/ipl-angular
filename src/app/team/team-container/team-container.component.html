@@ -1,0 +1,6 @@
+<button (click)="getTeams()">Click</button>
+<div class="team-comtainer">
+  <div class="team-card" *ngFor="let team of teamArray">
+    <p>Name : {{ team?.name }}</p>
+  </div>
+</div>
